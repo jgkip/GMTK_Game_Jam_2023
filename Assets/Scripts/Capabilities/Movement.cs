@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private EntityData data;
     private Transform target;
-    public float speed; 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,6 @@ public class Movement : MonoBehaviour
 
     private void MoveTowardsItem()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target.position, data.movementSpeed * Time.deltaTime);
     }
 }

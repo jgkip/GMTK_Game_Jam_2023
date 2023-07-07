@@ -220,8 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5c9b7662da7ba4ab4c67b70e5dad7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: fec7ff6063f39bc419f3a46803a722e7, type: 2}
   target: {fileID: 512377393}
-  speed: 5
 --- !u!1 &512377391
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 512377393}
   - component: {fileID: 512377392}
   - component: {fileID: 512377394}
+  - component: {fileID: 512377395}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -319,8 +320,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bdd0e526233f34a807021419e552de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 609160263}
-  speed: 10
+  data: {fileID: 11400000, guid: cc4d9b8f3f6c98745b713c608749ba17, type: 2}
+--- !u!61 &512377395
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512377391}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,12 +431,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &609160263 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1611841571682047854, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
-  m_PrefabInstance: {fileID: 1611841572282817321}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1611841572282817321
+--- !u!1001 &2090044654
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -419,7 +440,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1611841571682047852, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
       propertyPath: m_Name
-      value: Circle
+      value: HealthPack
       objectReference: {fileID: 0}
     - target: {fileID: 1611841571682047854, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
       propertyPath: m_RootOrder
@@ -427,11 +448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611841571682047854, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.541267
+      value: -11.31
       objectReference: {fileID: 0}
     - target: {fileID: 1611841571682047854, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.084288
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 1611841571682047854, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
       propertyPath: m_LocalPosition.z
