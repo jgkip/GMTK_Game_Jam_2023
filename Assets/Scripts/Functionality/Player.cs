@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // TODO: still added to max health bug
     private void ReplenishHealth(float healthToAdd)
     {
         // Debug.Log("Health replenished event");
