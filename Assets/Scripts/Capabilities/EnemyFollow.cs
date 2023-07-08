@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
     public static event Action<int> OnEnemyDeath;
     [SerializeField] private Transform target;
     [SerializeField] private float currentHealth;
+    public int index;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,8 @@ public class EnemyFollow : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            OnEnemyDeath?.Invoke();
+
+            OnEnemyDeath?.Invoke(index);
             Destroy(gameObject);
         }
     }

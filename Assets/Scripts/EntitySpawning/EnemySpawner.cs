@@ -42,9 +42,9 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void UpdateEnemyList()
+    private void UpdateEnemyList(int index)
     {
-        
+        enemyList.RemoveAt(index);
     }
 
     private void SpawnEnemies(int waveCount)
@@ -55,6 +55,8 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector2 spawnPos = worldData.RandSpawnPos();
             var enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+            EnemyFollow enemyD = enemy.GetComponent<EnemyFollow>();
+            enemyD.index = enemyList.IndexOf(enemy);
             enemyList.Add(enemy);
         }
         
