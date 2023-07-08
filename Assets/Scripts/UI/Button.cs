@@ -5,7 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
+    public ItemList items;
     [SerializeField] private string newGame = "Game";
+    private float minX, maxX, minY, maxY;
+    private Vector2 bounds;
+    public GameObject worldDataObject;
+    private WorldData worldData;
+
+    private void Start()
+    {
+        items = GetComponent<ItemList>();
+        worldData = worldDataObject.GetComponent<WorldData>();
+    }
 
     public void NewGame()
     {
@@ -26,4 +37,31 @@ public class Button : MonoBehaviour
     {
         Application.Quit();
     }
+
+    // Change this later... please
+    public void SpawnHealthPack()
+    {
+        Instantiate(items.itemList[0], worldData.RandSpawnPos(), Quaternion.identity);
+    }
+
+    public void SpawnIncreaseHealth()
+    {
+        Instantiate(items.itemList[1], worldData.RandSpawnPos(), Quaternion.identity);
+    }
+
+    public void SpawnIncreaseDamage()
+    {
+        Instantiate(items.itemList[2], worldData.RandSpawnPos(), Quaternion.identity);
+    }
+
+    public void SpawnIncreaseSpeed()
+    {
+        Instantiate(items.itemList[3], worldData.RandSpawnPos(), Quaternion.identity);
+    }
+
+    private Vector2 RandSpawnPos()
+    {
+        return new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+    }
+    
 }

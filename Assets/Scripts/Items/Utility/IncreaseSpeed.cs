@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseSpeed : MonoBehaviour
+public class IncreaseSpeed : Item
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public override void Consume()
+    {
+        throw new System.NotImplementedException();
     }
 }
 

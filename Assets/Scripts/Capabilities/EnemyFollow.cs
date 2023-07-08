@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    [SerializeField] private EntityData data;
+    public EntityData data;
     [SerializeField] private Transform target;
     // Start is called before the first frame update
     void Start()

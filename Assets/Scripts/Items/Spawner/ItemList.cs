@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public abstract class Item : MonoBehaviour
+public class ItemList : MonoBehaviour
 {
-    public abstract void Consume();
+    public List<GameObject> itemList;
 }

@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPack : MonoBehaviour
+public class HealthPack : Item
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) { 
+        if (collision.gameObject.tag.Equals("Player")) {
+            Destroy(gameObject);
+        }
+    }
+
+    public override void Consume()
     {
-        Destroy(gameObject);
+        Debug.Log("Consumed");
     }
 }
