@@ -62,19 +62,19 @@ public class Player : MonoBehaviour
 
     private void IncreaseMaxHP(float increaseAmount)
     {
-        Debug.Log("Increase max hp event");
+        //Debug.Log("Increase max hp event");
         playerData.healthPoints += increaseAmount;
     }
 
     private void UpgradeDamage(float multiplier)
     {
-        Debug.Log("Upgrade damage event");
+        //Debug.Log("Upgrade damage event");
         playerData.attackDamage *= multiplier;
     }
 
     private void UpgradeMobilitySpeed(float multiplier)
     {
-        Debug.Log("Upgrade speed event");
+        //Debug.Log("Upgrade speed event");
         playerData.movementSpeed *= multiplier;
     }
 
