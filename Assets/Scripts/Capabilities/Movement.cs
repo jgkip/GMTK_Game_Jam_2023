@@ -58,7 +58,7 @@ public class Movement : MonoBehaviour
         {
             if (currentPosition == newPosition)
             {
-                newPosition = worldData.RandomSpawnPos();
+                newPosition = worldData.RandSpawnPos();
             }
             else
             {

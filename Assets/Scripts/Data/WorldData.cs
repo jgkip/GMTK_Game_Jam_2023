@@ -19,10 +19,12 @@ public class WorldData : MonoBehaviour
         minimumY = -8;
         maximumY = 8;
         bounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        minX = -bounds.x;
-        maxX = bounds.x;
-        minY = -bounds.y;
-        maxY = bounds.y;
+        minX = -bounds.x + 5f;
+        maxX = bounds.x - 5f;
+        minY = -bounds.y + 2f;
+        maxY = bounds.y - 3f;
+        Debug.Log(minX.ToString() + ", " + maxX.ToString());
+        Debug.Log(minY.ToString() + ", " + maxY.ToString());
     }
 
     public Vector2 RandSpawnPos()

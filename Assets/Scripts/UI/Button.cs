@@ -63,7 +63,7 @@ public class Button : MonoBehaviour
     // Change this later... please
     public void SpawnHealthPack()
     {
-        Vector2 spawnPosition = worldData.RandomSpawnPos();
+        Vector2 spawnPosition = worldData.RandSpawnPos();
         OnItemSpawned?.Invoke(spawnPosition);
         Instantiate(items.itemList[0], spawnPosition, Quaternion.identity);
 
@@ -71,21 +71,21 @@ public class Button : MonoBehaviour
 
     public void SpawnIncreaseHealth()
     {
-        Vector2 spawnPosition = worldData.RandomSpawnPos();
+        Vector2 spawnPosition = worldData.RandSpawnPos();
         OnItemSpawned?.Invoke(spawnPosition);
         Instantiate(items.itemList[1], spawnPosition, Quaternion.identity);
     }
 
     public void SpawnIncreaseDamage()
     {
-        Vector2 spawnPosition = worldData.RandomSpawnPos();
+        Vector2 spawnPosition = worldData.RandSpawnPos();
         OnItemSpawned?.Invoke(spawnPosition);
         Instantiate(items.itemList[2], spawnPosition, Quaternion.identity);
     }
 
     public void SpawnIncreaseSpeed()
     {
-        Vector2 spawnPosition = worldData.RandomSpawnPos();
+        Vector2 spawnPosition = worldData.RandSpawnPos();
         OnItemSpawned?.Invoke(spawnPosition);
         Instantiate(items.itemList[3], spawnPosition, Quaternion.identity);
     }
