@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private EntityData data;
     [SerializeField] private Queue<Vector2> targets;
-    [SerializeField] private Vector2 target;
+    //[SerializeField] private Vector2 target;
     public GameObject worldDataObject;
     private WorldData worldData;
     private Vector2 newPosition, currentPosition;
@@ -25,9 +25,9 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Item").GetComponent<Transform>().position;
+        //target = GameObject.FindGameObjectWithTag("Item").GetComponent<Transform>().position;
         targets = new Queue<Vector2>();
-        targets.Enqueue(target);
+        //targets.Enqueue(target);
         worldData = worldDataObject.GetComponent<WorldData>();
         newPosition = worldData.RandSpawnPos();
     }
