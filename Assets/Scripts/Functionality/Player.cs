@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static event Action<float> OnHealthChange; // for ui changes 
+    // public static event Action<float> OnHealthChange; // for ui changes 
     [SerializeField] private EntityData playerData;
     [SerializeField] private float currentHealth;
     [SerializeField] private float damageDealt;
