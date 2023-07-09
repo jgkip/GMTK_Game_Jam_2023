@@ -6,14 +6,28 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private EntityData data;
-    private Transform target;
+    [SerializeField] private Queue<Vector2> targets;
+    [SerializeField] private Vector2 target;
     public GameObject worldDataObject;
     private WorldData worldData;
     private Vector2 newPosition, currentPosition;
+
+    public void OnEnable()
+    {
+        Button.OnItemSpawned += AddTargets;
+    }
+
+    public void OnDisable()
+    {
+        Button.OnItemSpawned -= AddTargets;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Item").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("Item").GetComponent<Transform>().position;
+        targets = new Queue<Vector2>();
+        targets.Enqueue(target);
         worldData = worldDataObject.GetComponent<WorldData>();
         newPosition = worldData.RandSpawnPos();
     }
@@ -21,24 +35,38 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // I'm actually so proud of this ;-;
         currentPosition = transform.position;
-        /*
-        if (target != null)
+        if (targets.Count != 0)
         {
-            MoveTo(target.position);
+            // Reached current target; remove from search
+            if (currentPosition == targets.Peek())
+            {
+                targets.Dequeue();
+            }
+            // Still need to reach the current target;
+            else
+            {
+                MoveTo(targets.Peek());
+            }
         }
-        */
-        
-        if (currentPosition == newPosition)
-        {
-            newPosition = worldData.RandSpawnPos();
-        }
+        // No targets; random walk
         else
         {
-            MoveTo(newPosition);
+            if (currentPosition == newPosition)
+            {
+                newPosition = worldData.RandomSpawnPos();
+            }
+            else
+            {
+                MoveTo(newPosition);
+            }
         }
-        
-        //target = GameObject.FindGameObjectWithTag("Item").GetComponent<Transform>();
+    }
+
+    private void AddTargets(Vector2 target)
+    {
+        targets.Enqueue(target);
     }
 
     private void MoveTo(Vector2 targetPosition)
