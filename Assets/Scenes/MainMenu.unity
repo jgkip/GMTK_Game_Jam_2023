@@ -1338,3 +1338,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: {fileID: 0}
   newGame: Game
+  worldDataObject: {fileID: 1409492538966438258, guid: e81dd0e1e7eb90348a77099b6ca41175, type: 3}
