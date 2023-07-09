@@ -505,7 +505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: cc4d9b8f3f6c98745b713c608749ba17, type: 2}
-  target: {x: 0, y: 0}
   worldDataObject: {fileID: 620618469}
 --- !u!61 &512377395
 BoxCollider2D:
@@ -1029,7 +1028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemList:
-  - {fileID: 1611841571682047852, guid: a2e15501c8593e74daec740e5065e5b9, type: 3}
+  - {fileID: 4193542838638329176, guid: caff1e82179c720408d5a96e2609f29c, type: 3}
   - {fileID: 3247825736087628157, guid: 36b21d0f249c8144b8b15d95fe678bcd, type: 3}
   - {fileID: 2274058833403716402, guid: 7a0a98203a628c243b91986bdf734977, type: 3}
   - {fileID: 179398684761942358, guid: 92452b6f11ce68f41984ef1cb94effec, type: 3}

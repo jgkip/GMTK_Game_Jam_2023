@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public static event Action<float> OnHealthChange; // for ui changes 
     [SerializeField] private EntityData playerData;
     [SerializeField] private float currentHealth;
+    [SerializeField] private float damageDealt;
+    [SerializeField] private float mobilitySpeed;
 
     private void OnEnable()
     {
@@ -30,6 +32,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentHealth = playerData.healthPoints;
+        damageDealt = playerData.attackDamage;
+        mobilitySpeed = playerData.movementSpeed;
+        // Debug.Log(GetSpeed());
     }
 
     // Update is called once per frame
@@ -70,17 +75,22 @@ public class Player : MonoBehaviour
     private void UpgradeDamage(float multiplier)
     {
         //Debug.Log("Upgrade damage event");
-        playerData.attackDamage *= multiplier;
+        damageDealt *= multiplier;
     }
 
     private void UpgradeMobilitySpeed(float multiplier)
     {
         //Debug.Log("Upgrade speed event");
-        playerData.movementSpeed *= multiplier;
+        mobilitySpeed *= multiplier;
     }
 
     private void TakeDamage(float damageValue)
     {
         currentHealth -= damageValue;
+    }
+
+    public float GetSpeed()
+    {
+        return mobilitySpeed;
     }
 }

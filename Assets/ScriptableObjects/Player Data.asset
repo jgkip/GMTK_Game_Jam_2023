@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 356cb48cd9891b142b9ab5f3c93afcb4, type: 3}
   m_Name: Player Data
   m_EditorClassIdentifier: 
-  healthPoints: 240
-  attackDamage: 28.531168
+  healthPoints: 100
+  attackDamage: 10
   movementSpeed: 10

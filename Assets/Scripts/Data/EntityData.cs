@@ -7,5 +7,5 @@ public class EntityData : ScriptableObject
 {
     public float healthPoints;
     public float attackDamage;
-    public float movementSpeed;
+    public float movementSpeed; 
 }

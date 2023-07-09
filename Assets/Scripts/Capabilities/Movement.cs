@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.RestService;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -11,6 +12,7 @@ public class Movement : MonoBehaviour
     public GameObject worldDataObject;
     private WorldData worldData;
     private Vector2 newPosition, currentPosition;
+    private float speed;
 
     public void OnEnable()
     {
@@ -25,6 +27,8 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed = GetComponent<Player>().GetSpeed();
+        //Debug.Log(speed);
         //target = GameObject.FindGameObjectWithTag("Item").GetComponent<Transform>().position;
         targets = new Queue<Vector2>();
         //targets.Enqueue(target);
