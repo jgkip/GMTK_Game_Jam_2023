@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4078535f7ee2fb147acdee8043c1ba80
+guid: 79ff494944f86ab419564662e913ca49
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,7 +93,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638244309431381619
+  platformSettingsDirtyTick: 638244467467271451
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -117,18 +117,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: gamebg
+  - name: consumables
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.61764705, y: -0.56060606}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 128
-      height: 72
-    spriteID: 82e1b5669bf2c9b46a8bf4d8f11c4bf8
+      width: 68
+      height: 66
+    spriteID: 5037f8222afd5be488a35981580375b4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,7 +138,47 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: gamebg_0
+  - name: consumables_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 56
+      width: 20
+      height: 14
+    spriteID: d1bae15b227dce9459e2e76566b76b76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: consumables_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 56
+      width: 20
+      height: 14
+    spriteID: f71fb4364354a6e4a9042c753a1fc516
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: consumables_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -147,9 +187,29 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 128
-      height: 72
-    spriteID: 6ab06813e15d83c4cad0e6f7fdc44bae
+      width: 21
+      height: 21
+    spriteID: 57d3e253fd90a5b4f8864a9db6069d92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: consumables_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 4
+      width: 19
+      height: 21
+    spriteID: 1a87f8ab2deab1a45b1171b0a1f6f035
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,20 +220,20 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 1309359535
-    name: gamebg
+    guid: 959508218
+    name: consumables
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: gamebg
+    - name: consumables
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 128
-        height: 72
-      spriteId: 82e1b5669bf2c9b46a8bf4d8f11c4bf8
+        x: 22
+        y: 37
+        width: 68
+        height: 66
+      spriteId: 5037f8222afd5be488a35981580375b4
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -212,4 +272,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 72}
+  canvasSize: {x: 128, y: 128}
